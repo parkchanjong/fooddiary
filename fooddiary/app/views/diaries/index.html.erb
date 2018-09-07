@@ -1,0 +1,38 @@
+<div class="navbar">
+  <a href="#home">ㅁㄴㅇㄹ</a>
+  <a href="#news">ㅁㄴㅇㄻㄴㅇㄹ</a>
+  <a href="#contact">ㅁㄴㅇㄹㄴㅇㄹ</a>
+</div>
+
+<div class="row">
+  <div class="column side"></div>
+  <div class="column middle">  
+<br>
+<br>
+<br>
+
+<h1>Listing articles</h1>
+ 
+<table>
+<%= link_to '새일기', new_diary_path %>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @diaries.each do |diary| %>
+    <tr>
+      <td><%= diary.foodname %></td>
+      <td><%= diary.foodp %></td>
+      <td><%= link_to 'Show', diary_path(diary) %></td>
+      <td><%= link_to 'Edit', edit_diary_path(diary) %></td>
+      <td><%= link_to 'Destroy', diary_path(diary),
+              method: :delete,
+              data: { confirm: '삭제?' } %></td>
+    </tr>
+   </div>
+    <% end %>
+    <div class="column side"></div>
+</table>
+

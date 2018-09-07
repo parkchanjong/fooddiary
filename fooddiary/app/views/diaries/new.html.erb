@@ -1,0 +1,37 @@
+
+<%= form_with scope: :diary, url: diaries_path, local: true do |form| %>
+  
+  <% if @diary.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@diary.errors.count, "error") %> 오류
+      </h2>
+      <ul>
+        <% @diary.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  
+  <p>
+    <%= form.label :음식이름 %><br>
+    <%= form.text_field :foodname %>
+  </p>
+ 
+  <p>
+    <%= form.label :음식사진 %><br>
+    <%= form.text_area :foodp %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+
+
+
+<%= link_to 'Back', diaries_path %>
