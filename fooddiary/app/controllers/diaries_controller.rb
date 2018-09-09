@@ -19,7 +19,7 @@ class DiariesController < ApplicationController
 
     def create
         @diary = Diary.new(diary_params)
-       
+
         if @diary.save
           redirect_to @diary
         else

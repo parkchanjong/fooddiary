@@ -7,10 +7,10 @@
 # system, you should be using db:schema:load, not running all the migrations
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
-#마이그레이션 실행해 다이어리에 맵핑
+#
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_07_080725) do
+ActiveRecord::Schema.define(version: 2018_09_09_123240) do
 
   create_table "diaries", force: :cascade do |t|
     t.text "foodname"
@@ -23,4 +23,5 @@ ActiveRecord::Schema.define(version: 2018_09_07_080725) do
     t.datetime "updated_at", null: false
   end
 
+ 
 end
