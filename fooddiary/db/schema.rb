@@ -10,18 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_09_123240) do
+ActiveRecord::Schema.define(version: 2018_09_16_085022) do
 
-  create_table "diaries", force: :cascade do |t|
-    t.text "foodname"
-    t.string "foodp"
+  create_table "comments", force: :cascade do |t|
+    t.string "calorie"
     t.date "day"
     t.string "time"
-    t.integer "calorie"
     t.string "bld"
+    t.integer "diary_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["diary_id"], name: "index_comments_on_diary_id"
+  end
+
+  create_table "diaries", force: :cascade do |t|
+    t.string "foodname"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
- 
 end

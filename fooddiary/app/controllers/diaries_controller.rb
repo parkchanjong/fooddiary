@@ -47,6 +47,6 @@ class DiariesController < ApplicationController
 
     private
     def diary_params
-        params.require(:diary).permit(:foodname, :foodp)
+        params.require(:diary).permit(:foodname, :image)
     end
 end

@@ -1,0 +1,16 @@
+
+<p>
+  <strong>calorie:</strong>
+  <%= comment.calorie %>
+</p>
+ 
+<p>
+  <strong>time:</strong>
+  <%= comment.time %>
+</p>
+ 
+<p>
+  <%= link_to 'Destroy Comment', [comment.diary, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

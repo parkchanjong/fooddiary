@@ -16,15 +16,15 @@
 <table>
 <%= link_to '새일기', new_diary_path %>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>name</th>
+    <th>image</th>
     <th colspan="2"></th>
   </tr>
  
   <% @diaries.each do |diary| %>
     <tr>
       <td><%= diary.foodname %></td>
-      <td><%= diary.foodp %></td>
+      <td><%= diary.image %></td>
       <td><%= link_to 'Show', diary_path(diary) %></td>
       <td><%= link_to 'Edit', edit_diary_path(diary) %></td>
       <td><%= link_to 'Destroy', diary_path(diary),

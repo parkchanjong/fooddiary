@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  calorie: MyString
+  day: 2018-09-16
+  time: MyString
+  bld: MyString
+  diary: one
+
+two:
+  calorie: MyString
+  day: 2018-09-16
+  time: MyString
+  bld: MyString
+  diary: two

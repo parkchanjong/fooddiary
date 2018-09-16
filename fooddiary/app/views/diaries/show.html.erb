@@ -6,9 +6,13 @@
  
 <p>
   <strong>foodp:</strong>
-  <%= @diary.foodp %>
+  <%= @diary.image %>
 </p>
 
+<%= render @diary.comments %>
+
+
+<%= render 'comments/form' %>
 
 
 <%= link_to 'Edit', edit_diary_path(@diary) %> |

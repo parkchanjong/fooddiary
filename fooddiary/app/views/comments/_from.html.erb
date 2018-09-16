@@ -1,0 +1,14 @@
+
+<%= form_with(model: [ @diary, @diary.comments.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :calorie %><br>
+    <%= form.text_field :calorie %>
+  </p>
+  <p>
+    <%= form.label :time %><br>
+    <%= form.text_area :time %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
