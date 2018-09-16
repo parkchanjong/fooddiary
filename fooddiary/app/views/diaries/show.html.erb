@@ -9,11 +9,53 @@
   <%= @diary.image %>
 </p>
 
-<%= render @diary.comments %>
 
+<% @diary.comments.each do |comment| %>
+ <p>
+  <strong>calorie:</strong>
+  <%= comment.calorie %>
+</p>
+ 
+<p>
+  <strong>time:</strong>
+  <%= comment.time %>
+</p>
+ 
+ <p>
+  <strong>day:</strong>
+  <%= comment.day %>
+</p>
 
-<%= render 'comments/form' %>
+<p>
+  <strong>bld:</strong>
+  <%= comment.bld %>
+</p>
+<% end %>
+ 
 
+<%= form_with(model: [ @diary, @diary.comments.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :calorie %><br>
+    <%= form.text_field :calorie %>
+  </p>
+  <p>
+    <%= form.label :time %><br>
+    <%= form.text_area :time %>
+  </p>
+
+  <p>
+    <%= form.label :day %><br>
+    <%= form.text_area :day %>
+  </p>
+
+  <p>
+    <%= form.label :bld %><br>
+    <%= form.text_area :bld %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
 
 <%= link_to 'Edit', edit_diary_path(@diary) %> |
 <%= link_to 'Back', diaries_path %>

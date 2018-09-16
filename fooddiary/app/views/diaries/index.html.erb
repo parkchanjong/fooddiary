@@ -1,7 +1,7 @@
 <div class="navbar">
-  <a href="#home">ㅁㄴㅇㄹ</a>
-  <a href="#news">ㅁㄴㅇㄻㄴㅇㄹ</a>
-  <a href="#contact">ㅁㄴㅇㄹㄴㅇㄹ</a>
+  <a href="#home">1</a>
+  <a href="#news">2</a>
+  <a href="#contact">3</a>
 </div>
 
 <div class="row">
@@ -23,8 +23,8 @@
  
   <% @diaries.each do |diary| %>
     <tr>
-      <td><%= diary.foodname %></td>
-      <td><%= diary.image %></td>
+      <td><%= diary.foodname %></td> 
+      <td><img src="<%= diary.image.url %>"></td>
       <td><%= link_to 'Show', diary_path(diary) %></td>
       <td><%= link_to 'Edit', edit_diary_path(diary) %></td>
       <td><%= link_to 'Destroy', diary_path(diary),

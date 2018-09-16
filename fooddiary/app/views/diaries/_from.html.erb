@@ -1,5 +1,5 @@
 
-<%= form_with model: @diary, local: true do |form| %>
+<%= form_with model: @diary, local: true, multipart: true do |form| %>
  
   <% if @diary.errors.any? %>
     <div id="error_explanation">
@@ -22,7 +22,7 @@
  
   <p>
     <%= form.label :음식사진 %><br>
-    <%= form.text_area :image %>
+    <%= form.file_field :image %><br>
   </p>
  
   <p>
