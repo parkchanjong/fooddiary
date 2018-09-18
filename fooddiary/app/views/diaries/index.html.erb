@@ -24,7 +24,7 @@
   <% @diaries.each do |diary| %>
     <tr>
       <td><%= diary.foodname %></td> 
-      <td><img src="<%= diary.image.url %>"></td>
+      <td><img class="img" src="<%= diary.image.url %>"></td>
       <td><%= link_to 'Show', diary_path(diary) %></td>
       <td><%= link_to 'Edit', edit_diary_path(diary) %></td>
       <td><%= link_to 'Destroy', diary_path(diary),
