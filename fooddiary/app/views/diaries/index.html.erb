@@ -11,13 +11,11 @@
 <br>
 <br>
 
-<h1>Listing articles</h1>
- 
+<h1>fooddiary</h1>
+<div class="bg-text"><%= image_tag 'd.jpg' %></div>
 <table>
 <%= link_to '새일기', new_diary_path %>
   <tr>
-    <th>name</th>
-    <th>image</th>
     <th colspan="2"></th>
   </tr>
  
@@ -35,4 +33,6 @@
     <% end %>
     <div class="column side"></div>
 </table>
+
+<%= render 'form' %>
 
