@@ -1,4 +1,19 @@
+<div class="navbar">
+  <a href="#home">1</a>
+  <a href="#news">2</a>
+  <a href="#contact">3</a>
+</div>
 
+<div class="row">
+  <div class="column side"></div>
+  <div class="column middle">  
+<br>
+<br>
+<br>
+<div class="bg-text"><%= render 'form' %></div>
+
+
+<div class="tb">
 <p>
   <strong>foodname:</strong>
   <%= @diary.foodname %>
@@ -57,5 +72,10 @@
   </p>
 <% end %>
 
+<iframe src="https://dataplatform.cloud.ibm.com/studio/watson-vision-combined/food/view?service_guid=crn:v1:bluemix:public:watson-vision-combined:us-south:a/29de3b01012194a4fc4e1bb3b0c2370f:6826efee-5c95-44a7-866b-1149900b7092::&project_id=107800a6-e67f-427e-ade7-9a61fbf511e4">
+  <p>이미지 인식</p>
+</iframe>
+
 <%= link_to 'Edit', edit_diary_path(@diary) %> |
 <%= link_to 'Back', diaries_path %>
+</div>

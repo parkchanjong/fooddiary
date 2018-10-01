@@ -14,8 +14,22 @@
     </div>
   <% end %>
 
+<div class="navbar">
+  <a href="#home">1</a>
+  <a href="#news">2</a>
+  <a href="#contact">3</a>
+</div>
 
-  
+<div class="row">
+  <div class="column side"></div>
+  <div class="column middle">  
+<br>
+<br>
+<br>
+<div class="bg-text"><%= render 'form' %></div>
+
+
+<div class="tb">  
   <p>
     <%= form.label :음식이름 %><br>
     <%= form.text_field :foodname %>
@@ -38,3 +52,4 @@
 
 
 <%= link_to 'Back', diaries_path %>
+</div>

@@ -1,5 +1,5 @@
 
-<h1>다이어리 수정</h1>
+
  
 <%= form_with(model: @diary, local: true, multipart: true) do |form| %>
  
@@ -15,7 +15,23 @@
       </ul>
     </div>
   <% end %>
- 
+
+ <div class="navbar">
+  <a href="#home">1</a>
+  <a href="#news">2</a>
+  <a href="#contact">3</a>
+</div>
+
+<div class="row">
+  <div class="column side"></div>
+  <div class="column middle">  
+<br>
+<br>
+<br>
+<div class="bg-text"><%= render 'form' %></div>
+
+<div class="tb">  
+<h1>다이어리 수정</h1>
   <p>
     <%= form.label :음식이름 %><br>
     <%= form.text_field :foodname %>
@@ -33,3 +49,4 @@
 <% end %>
  
 <%= link_to 'Back', diaries_path %>
+</div>
