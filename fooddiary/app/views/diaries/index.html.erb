@@ -1,15 +1,10 @@
-<div class="navbar">
-  <a href="#home">1</a>
-  <a href="#news">2</a>
-  <a href="#contact">3</a>
-</div>
+<%= render 'bar' %>
 
-<div class="row">
-  <div class="column side"></div>
-  <div class="column middle">  
-<br>
-<br>
-<br>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 <h1 style="text-align:center">fooddiary</h1>
 <div class="bg-text"><%= render 'form' %></div>
@@ -21,9 +16,9 @@
  
   <% @diaries.each do |diary| %>
     <tr>
-      <td><%= diary.foodname %></td> 
+      <td><h3><%= diary.foodname %></h3></td> 
       <td><img class="img" src="<%= diary.image.url %>"></td>
-      <td><%= link_to 'Show', diary_path(diary) %></td>
+      <td> <button type="button" class="btn btn-success"><%= link_to 'Show', diary_path(diary) %></td>
       <td><%= link_to 'Edit', edit_diary_path(diary) %></td>
       <td><%= link_to 'Destroy', diary_path(diary),
               method: :delete,
