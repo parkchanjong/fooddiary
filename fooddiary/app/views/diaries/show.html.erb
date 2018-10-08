@@ -5,12 +5,11 @@
 
 <div class="tb">
 <p>
-  <strong>foodname:</strong>
-  <%= @diary.foodname %>
+  <strong><%= @diary.foodname %></strong>
 </p>
  
 <p>
-  <strong>foodp:</strong>
+
   <%= @diary.image %>
 </p>
 
@@ -20,19 +19,19 @@
   <strong>calorie:</strong>
   <%= comment.calorie %>
 </p>
- 
+
 <p>
-  <strong>time:</strong>
-  <%= comment.time %>
-</p>
- 
- <p>
-  <strong>day:</strong>
+  <strong>날짜:</strong>
   <%= comment.day %>
 </p>
 
 <p>
-  <strong>bld:</strong>
+  <strong>먹은시간:</strong>
+  <%= comment.time %>
+</p>
+ 
+<p>
+  <strong>아침,점심,저녁:</strong>
   <%= comment.bld %>
 </p>
 <% end %>
@@ -62,7 +61,7 @@
   </p>
 <% end %>
 
-<iframe src="https://dataplatform.cloud.ibm.com/studio/watson-vision-combined/food/view?service_guid=crn:v1:bluemix:public:watson-vision-combined:us-south:a/29de3b01012194a4fc4e1bb3b0c2370f:6826efee-5c95-44a7-866b-1149900b7092::&project_id=107800a6-e67f-427e-ade7-9a61fbf511e4">
+<iframe height="500px" src="https://gc201535615.mybluemix.net/">
   <p>이미지 인식</p>
 </iframe>
 <br>
@@ -70,4 +69,10 @@
 <%= link_to 'Back', diaries_path %>
 </div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <%= render 'footer' %>

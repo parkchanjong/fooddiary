@@ -1,2 +1,5 @@
-# fooddiary
-# fooddiary
+# README
+
+## fooddiary
+
+* by parkjong
