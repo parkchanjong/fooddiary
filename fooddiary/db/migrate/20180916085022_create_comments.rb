@@ -5,6 +5,7 @@ class CreateComments < ActiveRecord::Migration[5.2]
       t.date :day
       t.string :time
       t.string :bld
+      #t.integer :user_id
       t.references :diary, foreign_key: true
 
       t.timestamps
